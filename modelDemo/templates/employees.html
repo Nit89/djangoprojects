@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title> Employee information</title>
+</head>
+<body>
+
+<h1>employee list</h1>
+{%if employees %}
+<table>
+    <thead>
+        <th>First Name </th>
+        <th>last Name </th>
+        <th>salary </th>
+        <th>Email </th>
+    </thead>
+    {%for emp in employees%}
+    <tr>
+        <td>{{emp.firstName}}</td>
+        <td>{{emp.lastName}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.email}}</td>
+    </tr>
+    {%endfor%}
+
+
+</table>
+{%else%}
+<p> no records </p>
+
+{%endif%}
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>update student</title>
+
+</head>
+<body>
+
+<h2>update student</h2>
+<form method="post">
+    {% csrf_token %}
+    <table>
+    {{form.as_table}}
+     
+    
+    </table>
+    <input type="submit"  value= "update"> 
+</form>
+
+
+</body>
+</html> 

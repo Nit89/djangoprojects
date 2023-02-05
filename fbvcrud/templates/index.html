@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>  student information</title>
+</head>
+<body>
+
+<h1>studnets: </h1>
+{%if students %}
+<table border="2">
+    <thead>
+        <th> Id</th>
+        <th> First Name</th>
+        <th>Last Name </th>
+        <th>Test Score</th>
+    
+
+    </thead>
+    {%for  student in students%}
+    <tr>
+        <td>{{student.id}}</td>
+        <td>{{student.firstName}}</td>
+        <td>{{student.lastName}}</td>
+        <td>{{student.testscore}}</td>
+        <td><a href ="/delete/{{student.id}}">Delete</a></td>
+        <td><a href ="/update/{{student.id}}">update</a></td>
+    </tr>
+    {%endfor%}
+
+
+</table>
+<br/><br/> <br/>
+<a href="/create"> Add students </a>
+
+
+
+{%else%}
+<p> no records </p>
+
+{%endif%}
+
+
+</body>
+</html>

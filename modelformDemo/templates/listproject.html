@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>  information</title>
+</head>
+<body>
+
+<h1>projects list</h1>
+{%if projects %}
+<table>
+    <thead>
+        <th> Name </th>
+        <th> Start DATE</th>
+        <th>END date </th>
+        <th>Assigned  to </th>
+        <th>priority</th>
+
+    </thead>
+    {%for  project in projects%}
+    <tr>
+        <td>{{project.name}}</td>
+        <td>{{project.startDate}}</td>
+        <td>{{project.endDate}}</td>
+        <td>{{project.assignedTo}}</td>
+        <td>{{project.priority }}</td>
+    </tr>
+    {%endfor%}
+
+
+</table>
+{%else%}
+<p> no records </p>
+
+{%endif%}
+
+
+</body>
+</html>

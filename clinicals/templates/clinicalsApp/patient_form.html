@@ -2,12 +2,13 @@
 {% load static %}
 <html>
 <head>
-<title>patient</title>
+    <link rel="stylesheet" href="{% static 'css/clinicals.css' %}"
+<title>create Patient</title>
 
 </head>
 <body>
 
-<h2>create student</h2>
+<h2>create Patient</h2>
 <form method="post">
     <table>
     {{form.as_table}}

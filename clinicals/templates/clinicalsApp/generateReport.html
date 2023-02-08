@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/clinicals.css' %}"
+<title> clinical data  report </title>
+</head>
+<body>
+
+<h1>Patient: </h1>
+{% comment %} {%if students %} {% endcomment %}
+<table border="2">
+    <thead>
+        <th> Component Name</th>
+        <th> Component value</th>
+        <th>Measure Date Time</th>
+       
+    
+
+    </thead>
+    {%for  eachEntry in data%}
+    <tr>
+        <td>{{eachEntry.componentName}}</td>
+        <td>{{eachEntry.componentValue}}</td>
+        <td>{{eachEntry.measureDateTime}}</td>
+        
+    
+    </tr>
+    {%endfor%}
+
+
+</table>
+ <br/><br/> <br/>
+ <a href="/">Home </a>
+
+
+
+{% comment %} {%else%} {% endcomment %}
+{% comment %} <p> no records </p> {% endcomment %}
+
+{% comment %} {%endif%} {% endcomment %}
+
+
+</body>
+</html>
+</html> 
